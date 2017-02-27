@@ -2561,6 +2561,7 @@
 				3B4262E41E538EC400CA681C /* page-metadata-parser.js */,
 			);
 			name = "Metadata Parsing";
+			sourceTree = "<group>";
 		};
 		39F99FC71E3A6DB700F353B4 /* Push */ = {
 			isa = PBXGroup;
