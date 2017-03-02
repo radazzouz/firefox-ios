@@ -23,6 +23,7 @@ let OpenWithSettings = "OpenWithSettings"
 let NewTabScreen = "NewTabScreen"
 let NewTabMenu = "NewTabMenu"
 let URLBarOpen = "URLBarOpen"
+let NewPrivateTab = "NewPrivateTab"
 
 let allSettingsScreens = [
     SettingsScreen,
@@ -69,6 +70,11 @@ func createScreenGraph(_ app: XCUIApplication, url: String = "https://www.mozill
         }
         scene.tap(app.buttons["Close Menu"], to: NewTabScreen)
         scene.dismissOnUse = true
+    }
+
+    map.createScene(NewPrivateTab) { scene in
+        scene.tap(app.textFields["url"], to: URLBarOpen)
+        scene.tap(app.buttons["TabTrayController.addTabButton"], to: NewTabScreen)
     }
 
     let navigationControllerBackAction = {
@@ -143,6 +149,7 @@ func createScreenGraph(_ app: XCUIApplication, url: String = "https://www.mozill
     map.createScene(TabTray) { scene in
         scene.tap(app.buttons["TabTrayController.menuButton"], to: TabTrayMenu)
         scene.tap(app.buttons["TabTrayController.addTabButton"], to: NewTabScreen)
+        scene.tap(app.buttons["TabTrayController.maskButton"], to: NewPrivateTab)
     }
 
     map.createScene(TabTrayMenu) { scene in
@@ -165,6 +172,7 @@ func createScreenGraph(_ app: XCUIApplication, url: String = "https://www.mozill
         scene.gesture(to: BrowserTabMenu2) {
             app.otherElements["MenuViewController.menuView"].swipeLeft()
         }
+        scene.tap(app.collectionViews.cells["NewTabMenuItem"], to: NewTabScreen)
         scene.dismissOnUse = true
     }
 
