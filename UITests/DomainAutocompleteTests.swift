@@ -9,8 +9,11 @@ class DomainAutocompleteTests: KIFTestCase {
     override func setUp() {
         super.setUp()
         BrowserUtils.dismissFirstRunUI(tester())
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
-    
+	
     func testAutocomplete() {
         BrowserUtils.addHistoryEntry("Mozilla", url: URL(string: "http://mozilla.org/")!)
         BrowserUtils.addHistoryEntry("Yahoo", url: URL(string: "http://www.yahoo.com/")!)
@@ -113,7 +116,9 @@ class DomainAutocompleteTests: KIFTestCase {
     }
 
     override func tearDown() {
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
         do {
             try tester().tryFindingTappableView(withAccessibilityLabel: "Cancel")
             tester().tapView(withAccessibilityLabel: "Cancel")

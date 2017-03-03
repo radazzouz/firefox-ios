@@ -24,12 +24,21 @@ private func getBrowserDBForFile(filename: String, files: FileAccessor) -> Brows
 class TestBookmarkModel: FailFastTestCase {
     let files = MockFiles()
 
+	override func setUp() {
+		super.setUp()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
+	}
+	
     override func tearDown() {
         do {
             try self.files.removeFilesInDirectory()
         } catch {
         }
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     private func getBrowserDB(name: String) -> BrowserDB? {

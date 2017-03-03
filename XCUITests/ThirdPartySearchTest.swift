@@ -9,10 +9,15 @@ class ThirdPartySearchTest: BaseTestCase {
     override func setUp() {
         super.setUp()
         dismissFirstRunUI()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
 
     override func tearDown() {
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     fileprivate func dismissKeyboardAssistant(forApp app: XCUIApplication) {

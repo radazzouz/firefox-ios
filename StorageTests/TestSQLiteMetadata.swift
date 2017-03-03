@@ -20,11 +20,16 @@ class TestSQLiteMetadata: XCTestCase {
         XCTAssertTrue(db.createOrUpdate(BrowserTable()) == .success)
         
         self.metadata = SQLiteMetadata(db: db)
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
 
     override func tearDown() {
         removeAllMetadata(self.db).succeeded()
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func testInsertMetadata() {

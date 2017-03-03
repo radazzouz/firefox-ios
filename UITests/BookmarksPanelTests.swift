@@ -13,10 +13,15 @@ class BookmarksPanelTests: KIFTestCase {
     override func setUp() {
         super.setUp()
 		BrowserUtils.dismissFirstRunUI()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
 	}
 	
     override func tearDown() {
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
 		BrowserUtils.resetToAboutHome(tester())
     }
     

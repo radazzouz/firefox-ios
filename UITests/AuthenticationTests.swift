@@ -17,6 +17,8 @@ class AuthenticationTests: KIFTestCase {
     override func tearDown() {
 		BrowserUtils.resetToAboutHome(tester())
 		BrowserUtils.clearPrivateData(tester: tester())
+		XCUIDevice().press(.home)
+		sleep(1)
 		super.tearDown()
     }
 

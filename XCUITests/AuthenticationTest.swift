@@ -31,12 +31,16 @@ class AuthenticationTest: BaseTestCase {
         app = XCUIApplication()
         navigator = createScreenGraph(app).navigator(self)
         continueAfterFailure = false
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
-    
+	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         closeAuthenticationManager()
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
     
     fileprivate func typePasscode(_ passCode: String) {

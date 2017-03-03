@@ -11,12 +11,17 @@ private let timeoutPeriod: TimeInterval = 600
 class AsyncReducerTests: XCTestCase {
     override func setUp() {
         super.setUp()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func testSimpleBehaviour() {

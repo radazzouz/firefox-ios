@@ -15,13 +15,16 @@ class BaseTestCase: XCTestCase {
 
     override func tearDown() {
         XCUIApplication().terminate()
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func restart(_ app: XCUIApplication) {
         app.terminate()
         app.launchArguments.append(LaunchArguments.Test)
         app.launchArguments.append(LaunchArguments.ClearProfile)
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
         app.launch()
         sleep(1)
     }

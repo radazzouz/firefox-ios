@@ -14,11 +14,16 @@ class SearchTests: BaseTestCase {
     override func setUp() {
         super.setUp()
         app = XCUIApplication()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
         navigator = createScreenGraph(app).navigator(self)
+		app.launch()
     }
-    
+	
     override func tearDown() {
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
     
     private func typeOnSearchBar(text: String) {

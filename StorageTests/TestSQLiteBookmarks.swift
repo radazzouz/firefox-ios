@@ -35,7 +35,14 @@ class TestSQLiteBookmarks: XCTestCase {
             try self.files.remove(path)
         } catch {}
     }
-
+	
+	override func setUp() {
+		super.setUp()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
+	}
+	
     override func tearDown() {
         self.remove("TSQLBtestBookmarks.db")
         self.remove("TSQLBtestBufferStorage.db")
@@ -43,7 +50,9 @@ class TestSQLiteBookmarks: XCTestCase {
         self.remove("TSQLBtestRecursiveAndURLDelete.db")
         self.remove("TSQLBtestUnrooted.db")
         self.remove("TSQLBtestTreeBuilding.db")
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func testBookmarks() {

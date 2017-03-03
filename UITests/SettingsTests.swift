@@ -11,10 +11,15 @@ class SettingsTests: KIFTestCase {
     override func setUp() {
         webRoot = SimplePageServer.start()
         BrowserUtils.dismissFirstRunUI(tester())
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
 
     override func tearDown() {
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func testHelpOpensSUMOInTab() {

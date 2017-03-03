@@ -11,12 +11,15 @@ class HomePageSettingsTest: BaseTestCase {
     override func setUp() {
         super.setUp()
         app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
         navigator = createScreenGraph(app).navigator(self)
     }
-    
+	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
     
     // This test has moved from KIF UITest - accesses google.com instead of local webserver instance

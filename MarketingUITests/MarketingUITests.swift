@@ -22,12 +22,15 @@ class MarketingSnapshotTests: XCTestCase {
 
         let app = XCUIApplication()
         setupSnapshot(app)
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
         app.launch()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 
     func loadWebPage(url: String, testForAutocompleteDialog: Bool = false) {

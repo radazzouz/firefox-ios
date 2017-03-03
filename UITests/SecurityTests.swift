@@ -13,8 +13,11 @@ class SecurityTests: KIFTestCase {
         webRoot = SimplePageServer.start()
         BrowserUtils.dismissFirstRunUI()
         super.setUp()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
-    
+	
     func enterUrl(url: String) {
         EarlGrey.select(elementWithMatcher: grey_accessibilityID("url"))
             .perform(grey_tap())
@@ -91,6 +94,8 @@ class SecurityTests: KIFTestCase {
     override func tearDown() {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 }

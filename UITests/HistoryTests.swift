@@ -13,8 +13,11 @@ class HistoryTests: KIFTestCase {
         super.setUp()
         webRoot = SimplePageServer.start()
         BrowserUtils.dismissFirstRunUI()
+		let app = XCUIApplication()
+		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		app.launch()
     }
-    
+	
     func addHistoryItemPage(_ pageNo: Int) -> String {
         // Load a page
         let url = "\(webRoot!)/numberedPage.html?page=\(pageNo)"
@@ -136,6 +139,8 @@ class HistoryTests: KIFTestCase {
     override func tearDown() {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
-        super.tearDown()
+        XCUIDevice().press(.home)
+		sleep(1)     
+		super.tearDown()
     }
 }
