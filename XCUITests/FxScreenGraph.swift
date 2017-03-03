@@ -172,7 +172,6 @@ func createScreenGraph(_ app: XCUIApplication, url: String = "https://www.mozill
         scene.gesture(to: BrowserTabMenu2) {
             app.otherElements["MenuViewController.menuView"].swipeLeft()
         }
-        scene.tap(app.collectionViews.cells["NewTabMenuItem"], to: NewTabScreen)
         scene.dismissOnUse = true
     }
 

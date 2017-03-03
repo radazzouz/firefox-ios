@@ -60,6 +60,7 @@ class AuthenticationTest: BaseTestCase {
     }
     
     fileprivate func enablePasscode(_ passCode: String) {
+        navigator.goto(NewTabMenu)
         navigator.goto(PasscodeSettings)
 
         app.tables["AuthenticationManager.settingsTableView"].staticTexts["Turn Passcode On"].tap()

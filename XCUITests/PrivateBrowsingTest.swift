@@ -132,7 +132,6 @@ class PrivateBrowsingTest: BaseTestCase {
         // If no private tabs are open, there should be a initial screen with label Private Browsing
         navigator.goto(TabTray)
         navigator.goto(NewPrivateTab)
-        print(app.debugDescription)
 
         XCTAssertTrue(app.staticTexts["Private Browsing"].exists, "Private Browsing screen is not shown")
         let numPrivTabsFirstTime = app.collectionViews.cells.count
