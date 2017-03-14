@@ -11,14 +11,15 @@ class BookmarkingTests: BaseTestCase {
     override func setUp() {
         super.setUp()
         app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
         navigator = createScreenGraph(app).navigator(self)
     }
     
     override func tearDown() {
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
     

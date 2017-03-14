@@ -14,14 +14,15 @@ class SearchTests: BaseTestCase {
     override func setUp() {
         super.setUp()
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		
         navigator = createScreenGraph(app).navigator(self)
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 	
     override func tearDown() {
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
     

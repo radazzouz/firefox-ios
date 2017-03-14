@@ -22,14 +22,15 @@ class MarketingSnapshotTests: XCTestCase {
 
         let app = XCUIApplication()
         setupSnapshot(app)
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		
         app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
 

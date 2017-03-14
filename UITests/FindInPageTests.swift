@@ -14,13 +14,13 @@ class FindInPageTests: KIFTestCase {
         webRoot = SimplePageServer.start()
         BrowserUtils.dismissFirstRunUI(tester())
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 	
     override func tearDown() {
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())

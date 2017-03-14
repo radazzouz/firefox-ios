@@ -13,7 +13,8 @@ class ActivityStreamTest: BaseTestCase {
     }
 
     override func tearDown() {
-        super.tearDown()
+		BuddyBuildSDK.stopUITestsVideoRecording()
+		super.tearDown()
     }
 
     func testDefaultSites() {

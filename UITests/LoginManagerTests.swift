@@ -19,7 +19,8 @@ class LoginManagerTests: KIFTestCase {
     }
 
     override func tearDown() {
-        super.tearDown()
+        BuddyBuildSDK.stopUITestsVideoRecording()
+		super.tearDown()
         clearLogins()
         PasscodeUtils.resetPasscode()
         BrowserUtils.resetToAboutHome(tester())

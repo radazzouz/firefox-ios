@@ -222,10 +222,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         log.debug("Setting up Adjust")
         self.adjustIntegration?.triggerApplicationDidFinishLaunchingWithOptions(launchOptions)
 
-        #if BUDDYBUILD
+        //#if BUDDYBUILD
             log.debug("Setting up BuddyBuild SDK")
             BuddyBuildSDK.setup()
-        #endif
+        //#endif
         
         log.debug("Making window key and visible…")
         self.window!.makeKeyAndVisible()
@@ -250,6 +250,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         return shouldPerformAdditionalDelegateHandling
     }
 
+	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+		//#if BUDDYBUILD
+			
+			BuddyBuildSDK.uiTestRecordingDidReceiveRemoteNotification(userInfo)
+		//#endif
+	}
+	
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             return false

@@ -15,13 +15,13 @@ class UIPasteboardExtensionsTests: XCTestCase {
         super.setUp()
         pasteboard = UIPasteboard.withUniqueName()
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 
     override func tearDown() {
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
         UIPasteboard.remove(withName: pasteboard.name)
     }

@@ -19,6 +19,7 @@ class L10nBaseSnapshotTests: XCTestCase {
             app.launchArguments.append(LaunchArguments.SkipIntro)
         }
         app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 
     func loadWebPage(url: String, waitForOtherElementWithAriaLabel ariaLabel: String) {

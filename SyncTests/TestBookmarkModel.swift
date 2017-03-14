@@ -27,8 +27,8 @@ class TestBookmarkModel: FailFastTestCase {
 	override func setUp() {
 		super.setUp()
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
 	}
 	
     override func tearDown() {
@@ -36,8 +36,8 @@ class TestBookmarkModel: FailFastTestCase {
             try self.files.removeFilesInDirectory()
         } catch {
         }
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
 

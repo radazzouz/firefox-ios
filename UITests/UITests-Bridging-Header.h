@@ -10,5 +10,6 @@
 #import <KIF/UIApplication-KIFAdditions.h>
 #import <KIF/UIAccessibilityElement-KIFAdditions.h>
 #import <KIF/UIWindow-KIFAdditions.h>
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 #endif

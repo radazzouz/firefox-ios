@@ -16,15 +16,15 @@ class BrowserTests: KIFTestCase {
         webRoot = SimplePageServer.start()
         BrowserUtils.dismissFirstRunUI()
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 	
     override func tearDown() {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
     

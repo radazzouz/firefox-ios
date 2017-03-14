@@ -11,14 +11,14 @@ class HomePageSettingsTest: BaseTestCase {
     override func setUp() {
         super.setUp()
         app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
+		
         navigator = createScreenGraph(app).navigator(self)
     }
 	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
     

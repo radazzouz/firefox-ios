@@ -140,6 +140,12 @@ typedef void (^BBCallback)();
  */
 + (void)log:(NSString *)message;
 
++ (void)startUITestsVideoRecording;
+
++ (void)stopUITestsVideoRecording;
+
++ (void)uiTestRecordingDidReceiveRemoteNotification:(NSDictionary *)userInfo;
+
 @end
 
 @interface UIView (BuddyBuildSDK)

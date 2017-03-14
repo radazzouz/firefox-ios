@@ -15,14 +15,14 @@ class PrefsTests: XCTestCase {
         super.setUp()
         prefs = NSUserDefaultsPrefs(prefix: "PrefsTests")
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 
     override func tearDown() {
         prefs.clearAll()
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
 

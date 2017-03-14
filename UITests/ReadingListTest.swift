@@ -16,8 +16,8 @@ class ReadingListTests: KIFTestCase, UITextFieldDelegate {
             .replacingOccurrences(of: "127.0.0.1", with: "localhost", options: NSString.CompareOptions(), range: nil)
         BrowserUtils.dismissFirstRunUI()
 		let app = XCUIApplication()
-		app.launchArguments.append("BUDDYBUILD_UI_TESTS_VIDEO_RECORDING")
 		app.launch()
+        BuddyBuildSDK.startUITestsVideoRecording()
     }
 	
     func enterUrl(url: String) {
@@ -160,8 +160,8 @@ class ReadingListTests: KIFTestCase, UITextFieldDelegate {
     override func tearDown() {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
-        XCUIDevice().press(.home)
-		sleep(1)     
+     
+		BuddyBuildSDK.stopUITestsVideoRecording()
 		super.tearDown()
     }
 }

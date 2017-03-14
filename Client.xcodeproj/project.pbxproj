@@ -353,7 +353,27 @@
 		7BF5A1CA1B4160EA00EA9DD8 /* SyncCommandsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1C91B4160EA00EA9DD8 /* SyncCommandsTable.swift */; };
 		7BF5A1EA1B41640500EA9DD8 /* SyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */; };
 		7BF5A1EE1B429B3100EA9DD8 /* SyncCommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1ED1B429B3100EA9DD8 /* SyncCommandsTests.swift */; };
-		84E1CD061E71A09300CDAACE /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD051E71A09300CDAACE /* BuddyBuildSDK.framework */; };
+		846B34221E776125008A4B3F /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B34211E776125008A4B3F /* BuddyBuildSDK.framework */; };
+		846B34231E776125008A4B3F /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B34211E776125008A4B3F /* BuddyBuildSDK.framework */; };
+		846B34241E7761BF008A4B3F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD211E71A10900CDAACE /* CoreVideo.framework */; };
+		846B34251E7761C4008A4B3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD231E71A11500CDAACE /* QuartzCore.framework */; };
+		846B34261E7761CB008A4B3F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD191E71A0C400CDAACE /* CoreText.framework */; };
+		846B34271E7761CB008A4B3F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD171E71A0B600CDAACE /* CoreTelephony.framework */; };
+		846B34281E776206008A4B3F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD151E71A0A800CDAACE /* AssetsLibrary.framework */; };
+		846B34291E776225008A4B3F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1D1E71A0E900CDAACE /* CoreMedia.framework */; };
+		846B342A1E776231008A4B3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD251E71A12E00CDAACE /* SystemConfiguration.framework */; };
+		846B342B1E7763C0008A4B3F /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B34211E776125008A4B3F /* BuddyBuildSDK.framework */; };
+		846B342C1E77641E008A4B3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1F1E71A0F500CDAACE /* AVFoundation.framework */; };
+		846B342D1E77641E008A4B3F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1B1E71A0D300CDAACE /* CoreFoundation.framework */; };
+		846B342E1E776420008A4B3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD251E71A12E00CDAACE /* SystemConfiguration.framework */; };
+		846B342F1E776420008A4B3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD231E71A11500CDAACE /* QuartzCore.framework */; };
+		846B34301E776420008A4B3F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD211E71A10900CDAACE /* CoreVideo.framework */; };
+		846B34311E776420008A4B3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1F1E71A0F500CDAACE /* AVFoundation.framework */; };
+		846B34321E776420008A4B3F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1D1E71A0E900CDAACE /* CoreMedia.framework */; };
+		846B34331E776420008A4B3F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD1B1E71A0D300CDAACE /* CoreFoundation.framework */; };
+		846B34341E776420008A4B3F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD191E71A0C400CDAACE /* CoreText.framework */; };
+		846B34351E776420008A4B3F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD171E71A0B600CDAACE /* CoreTelephony.framework */; };
+		846B34361E776420008A4B3F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD151E71A0A800CDAACE /* AssetsLibrary.framework */; };
 		84E1CD161E71A0A800CDAACE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD151E71A0A800CDAACE /* AssetsLibrary.framework */; };
 		84E1CD181E71A0B600CDAACE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD171E71A0B600CDAACE /* CoreTelephony.framework */; };
 		84E1CD1A1E71A0C400CDAACE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E1CD191E71A0C400CDAACE /* CoreText.framework */; };
@@ -1521,7 +1541,7 @@
 		7BF5A1C91B4160EA00EA9DD8 /* SyncCommandsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncCommandsTable.swift; sourceTree = "<group>"; };
 		7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncQueue.swift; sourceTree = "<group>"; };
 		7BF5A1ED1B429B3100EA9DD8 /* SyncCommandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncCommandsTests.swift; sourceTree = "<group>"; };
-		84E1CD051E71A09300CDAACE /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		846B34211E776125008A4B3F /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = ThirdParty/BuddyBuild/BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		84E1CD151E71A0A800CDAACE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		84E1CD171E71A0B600CDAACE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		84E1CD191E71A0C400CDAACE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -1932,7 +1952,6 @@
 				84E1CD1A1E71A0C400CDAACE /* CoreText.framework in Frameworks */,
 				84E1CD181E71A0B600CDAACE /* CoreTelephony.framework in Frameworks */,
 				84E1CD161E71A0A800CDAACE /* AssetsLibrary.framework in Frameworks */,
-				84E1CD061E71A09300CDAACE /* BuddyBuildSDK.framework in Frameworks */,
 				7B8A47F61D01D3B400C07734 /* PassKit.framework in Frameworks */,
 				E6B6DCA21CD3D370009CF713 /* CrashReporter.framework in Frameworks */,
 				7B604F861C494983006EEEC3 /* Alamofire.framework in Frameworks */,
@@ -1955,6 +1974,7 @@
 				3B4988CE1E42B01800A12FDA /* SwiftyJSON.framework in Frameworks */,
 				0B8E0FF41A932BD500161DC3 /* ImageIO.framework in Frameworks */,
 				E4A888161A95679500CDC337 /* FxA.framework in Frameworks */,
+				846B34221E776125008A4B3F /* BuddyBuildSDK.framework in Frameworks */,
 				282731751ABC9BE700AA1954 /* Sync.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2017,7 +2037,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B34291E776225008A4B3F /* CoreMedia.framework in Frameworks */,
+				846B342A1E776231008A4B3F /* SystemConfiguration.framework in Frameworks */,
+				846B342C1E77641E008A4B3F /* AVFoundation.framework in Frameworks */,
+				846B34251E7761C4008A4B3F /* QuartzCore.framework in Frameworks */,
 				E6EC6EED1E53548A0067985D /* EarlGrey.framework in Frameworks */,
+				846B34281E776206008A4B3F /* AssetsLibrary.framework in Frameworks */,
+				846B34261E7761CB008A4B3F /* CoreText.framework in Frameworks */,
+				846B34231E776125008A4B3F /* BuddyBuildSDK.framework in Frameworks */,
+				846B342D1E77641E008A4B3F /* CoreFoundation.framework in Frameworks */,
+				846B34271E7761CB008A4B3F /* CoreTelephony.framework in Frameworks */,
+				846B34241E7761BF008A4B3F /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2039,11 +2069,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846B342F1E776420008A4B3F /* QuartzCore.framework in Frameworks */,
+				846B34321E776420008A4B3F /* CoreMedia.framework in Frameworks */,
+				846B34351E776420008A4B3F /* CoreTelephony.framework in Frameworks */,
 				7BA4A9661C4D008C0091D032 /* Deferred.framework in Frameworks */,
+				846B34311E776420008A4B3F /* AVFoundation.framework in Frameworks */,
+				846B342E1E776420008A4B3F /* SystemConfiguration.framework in Frameworks */,
+				846B342B1E7763C0008A4B3F /* BuddyBuildSDK.framework in Frameworks */,
 				E6231C071B90A712005ABB0D /* libz.tbd in Frameworks */,
+				846B34301E776420008A4B3F /* CoreVideo.framework in Frameworks */,
+				846B34361E776420008A4B3F /* AssetsLibrary.framework in Frameworks */,
+				846B34331E776420008A4B3F /* CoreFoundation.framework in Frameworks */,
 				7B604F991C494F74006EEEC3 /* KIF.framework in Frameworks */,
 				D36998891AD70A0A00650C6C /* IOKit.framework in Frameworks */,
 				D39FA16C1A83E17800EE869C /* CoreGraphics.framework in Frameworks */,
+				846B34341E776420008A4B3F /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2658,6 +2698,7 @@
 		7B604FC11C496005006EEEC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				846B34211E776125008A4B3F /* BuddyBuildSDK.framework */,
 				84E1CD251E71A12E00CDAACE /* SystemConfiguration.framework */,
 				84E1CD231E71A11500CDAACE /* QuartzCore.framework */,
 				84E1CD211E71A10900CDAACE /* CoreVideo.framework */,
@@ -2667,7 +2708,6 @@
 				84E1CD191E71A0C400CDAACE /* CoreText.framework */,
 				84E1CD171E71A0B600CDAACE /* CoreTelephony.framework */,
 				84E1CD151E71A0A800CDAACE /* AssetsLibrary.framework */,
-				84E1CD051E71A09300CDAACE /* BuddyBuildSDK.framework */,
 				3B4988CD1E42B01800A12FDA /* SwiftyJSON.framework */,
 				E6231C041B90A472005ABB0D /* libxml2.2.tbd */,
 				E6231C021B90A466005ABB0D /* libstdc++.6.0.9.tbd */,
@@ -4067,7 +4107,7 @@
 					};
 					282731671ABC9BE700AA1954 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4094,7 +4134,7 @@
 					};
 					2FCAE2231ABB51F800877008 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4106,7 +4146,7 @@
 					};
 					3B43E3CF1D95C48D00BBA9DB = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F84B21BD1A090F8100AAB793;
@@ -4127,7 +4167,7 @@
 					};
 					D39FA15E1A83E0EC00EE869C = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 9G8J6YA743;
+						DevelopmentTeam = 43AQ936H96;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4149,7 +4189,7 @@
 					};
 					E4D567211ADECE2700F1EFE7 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -4161,7 +4201,7 @@
 					};
 					E6F9650B1B2F1CF20034B023 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 					};
 					F84B21BD1A090F8100AAB793 = {
@@ -4183,7 +4223,7 @@
 					};
 					F84B21D21A090F8100AAB793 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 43AQ936H96;
+						DevelopmentTeam = 9G8J6YA743;
 						LastSwiftMigration = 0820;
 						TestTargetID = F84B21BD1A090F8100AAB793;
 					};
@@ -6063,6 +6103,11 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -6085,6 +6130,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozilla.XCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/UITests/UITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Client;
@@ -6114,6 +6160,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -6129,6 +6180,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozilla.XCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/UITests/UITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Client;
 				VALIDATE_PRODUCT = YES;
@@ -6158,6 +6210,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -6173,6 +6230,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozilla.XCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/UITests/UITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Client;
 				VALIDATE_PRODUCT = YES;
@@ -6202,6 +6260,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -6217,6 +6280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozilla.XCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/UITests/UITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Client;
 				VALIDATE_PRODUCT = YES;
@@ -6227,6 +6291,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -6242,6 +6310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -6336,6 +6408,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/ThirdParty/PLCrashReporter",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6431,6 +6504,10 @@
 		E448FCA21AEE7A6000869B6C /* Firefox */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.allizom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = UITests;
@@ -7210,6 +7287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -7698,6 +7779,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -7854,6 +7939,11 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -7876,6 +7966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mozilla.XCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/UITests/UITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Client;
@@ -8053,6 +8144,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/ThirdParty/PLCrashReporter",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8165,6 +8257,10 @@
 		E6FCC42F1C40562400DF6113 /* FirefoxBeta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/BuddyBuild",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.allizom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = UITests;
