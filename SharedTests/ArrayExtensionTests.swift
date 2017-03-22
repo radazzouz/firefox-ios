@@ -12,7 +12,6 @@ class ArrayExtensionTests: XCTestCase {
 		let app = XCUIApplication()
 		app.launch()
         BuddyBuildSDK.startUITestsVideoRecording()
-		BuddyBuildSDK.
     }
 
     override func tearDown() {

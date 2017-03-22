@@ -8,6 +8,14 @@
 	<string>$(ADJUST_ENVIRONMENT)</string>
 	<key>AppIdentifierPrefix</key>
 	<string>$(APP_IDENTIFIER_PREFIX)</string>
+	<key>BUDDYBUILD_BUILD_ID</key>
+	<string>BUILD_ID</string>
+	<key>BUDDYBUILD_ENDPOINT</key>
+	<string>some.url</string>
+	<key>BUDDYBUILD_SETTING_ENABLE_CRASH_REPORTING</key>
+	<integer>1</integer>
+	<key>BUDDYBUILD_SETTING_ENABLE_UI_TESTS_VIDEO_RECORDING</key>
+	<integer>1</integer>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -60,14 +68,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Websites you visit may request your location.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This lets you save and upload photos.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This lets you take and upload photos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Websites you visit may request your location.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This lets you take and upload videos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This lets you save and upload photos.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>org.mozilla.ios.firefox.browsing</string>
