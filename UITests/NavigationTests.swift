@@ -14,7 +14,7 @@ class NavigationTests: KIFTestCase, UITextFieldDelegate {
         BrowserUtils.dismissFirstRunUI(tester())
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     /**
@@ -279,7 +279,7 @@ class NavigationTests: KIFTestCase, UITextFieldDelegate {
 
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())

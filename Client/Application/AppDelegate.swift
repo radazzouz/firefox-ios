@@ -253,7 +253,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
 	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
 		//#if BUDDYBUILD
 			
-			BuddyBuildSDK.uiTestRecordingDidReceiveRemoteNotification(userInfo)
+			BuddyBuildSDK.uiTestsDidReceiveRemoteNotification(userInfo)
 		//#endif
 	}
 	

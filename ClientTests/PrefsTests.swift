@@ -16,13 +16,13 @@ class PrefsTests: XCTestCase {
         prefs = NSUserDefaultsPrefs(prefix: "PrefsTests")
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     override func tearDown() {
         prefs.clearAll()
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

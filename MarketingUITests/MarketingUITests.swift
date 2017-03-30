@@ -24,13 +24,13 @@ class MarketingSnapshotTests: XCTestCase {
         setupSnapshot(app)
 		
         app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

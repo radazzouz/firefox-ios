@@ -22,13 +22,13 @@ class TestSQLiteMetadata: XCTestCase {
         self.metadata = SQLiteMetadata(db: db)
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     override func tearDown() {
         removeAllMetadata(self.db).succeeded()
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

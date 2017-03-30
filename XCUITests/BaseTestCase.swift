@@ -16,7 +16,7 @@ class BaseTestCase: XCTestCase {
     override func tearDown() {
         XCUIApplication().terminate()
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 
@@ -26,7 +26,7 @@ class BaseTestCase: XCTestCase {
         app.launchArguments.append(LaunchArguments.ClearProfile)
 		
         app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
         sleep(1)
     }
     

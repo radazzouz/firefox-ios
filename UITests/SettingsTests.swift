@@ -13,12 +13,12 @@ class SettingsTests: KIFTestCase {
         BrowserUtils.dismissFirstRunUI(tester())
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

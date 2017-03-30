@@ -15,7 +15,7 @@ class SecurityTests: KIFTestCase {
         super.setUp()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     func enterUrl(url: String) {
@@ -95,7 +95,7 @@ class SecurityTests: KIFTestCase {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 }

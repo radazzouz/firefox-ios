@@ -17,7 +17,7 @@ class ReadingListTests: KIFTestCase, UITextFieldDelegate {
         BrowserUtils.dismissFirstRunUI()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     func enterUrl(url: String) {
@@ -161,7 +161,7 @@ class ReadingListTests: KIFTestCase, UITextFieldDelegate {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 }

@@ -33,14 +33,14 @@ class AuthenticationTest: BaseTestCase {
         continueAfterFailure = false
 		
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         closeAuthenticationManager()
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
     

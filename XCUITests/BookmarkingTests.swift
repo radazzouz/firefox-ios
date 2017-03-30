@@ -13,13 +13,13 @@ class BookmarkingTests: BaseTestCase {
         app = XCUIApplication()
 		
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
         navigator = createScreenGraph(app).navigator(self)
     }
     
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
     

@@ -40,7 +40,7 @@ class TestSQLiteBookmarks: XCTestCase {
 		super.setUp()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
 	}
 	
     override func tearDown() {
@@ -51,7 +51,7 @@ class TestSQLiteBookmarks: XCTestCase {
         self.remove("TSQLBtestUnrooted.db")
         self.remove("TSQLBtestTreeBuilding.db")
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

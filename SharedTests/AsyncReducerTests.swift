@@ -13,14 +13,14 @@ class AsyncReducerTests: XCTestCase {
         super.setUp()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

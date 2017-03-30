@@ -28,7 +28,7 @@ class TestBookmarkModel: FailFastTestCase {
 		super.setUp()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
 	}
 	
     override func tearDown() {
@@ -37,7 +37,7 @@ class TestBookmarkModel: FailFastTestCase {
         } catch {
         }
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

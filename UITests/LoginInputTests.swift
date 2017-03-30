@@ -17,7 +17,7 @@ class LoginInputTests: KIFTestCase {
         BrowserUtils.dismissFirstRunUI()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     override func tearDown() {
@@ -25,7 +25,7 @@ class LoginInputTests: KIFTestCase {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
     

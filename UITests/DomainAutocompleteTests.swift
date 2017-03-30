@@ -11,7 +11,7 @@ class DomainAutocompleteTests: KIFTestCase {
         BrowserUtils.dismissFirstRunUI(tester())
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     func testAutocomplete() {
@@ -117,7 +117,7 @@ class DomainAutocompleteTests: KIFTestCase {
 
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
         do {
             try tester().tryFindingTappableView(withAccessibilityLabel: "Cancel")

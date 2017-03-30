@@ -148,7 +148,7 @@ class TestBookmarkTreeMerging: FailFastTestCase {
 		super.setUp()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
 	}
 	
     override func tearDown() {
@@ -157,7 +157,7 @@ class TestBookmarkTreeMerging: FailFastTestCase {
         } catch {
         }
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

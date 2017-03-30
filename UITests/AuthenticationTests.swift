@@ -17,7 +17,7 @@ class AuthenticationTests: KIFTestCase {
     override func tearDown() {
 		BrowserUtils.resetToAboutHome(tester())
 		BrowserUtils.clearPrivateData(tester: tester())
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 

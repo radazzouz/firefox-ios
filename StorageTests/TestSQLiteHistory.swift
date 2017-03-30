@@ -825,7 +825,7 @@ class TestSQLiteHistory: XCTestCase {
 
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
         self.deleteDatabases()
     }
@@ -837,7 +837,7 @@ class TestSQLiteHistory: XCTestCase {
         self.deleteDatabases()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 
     // Test that our visit partitioning for frecency is correct.

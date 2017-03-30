@@ -17,12 +17,12 @@ class SearchTests: BaseTestCase {
 		
         navigator = createScreenGraph(app).navigator(self)
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     override func tearDown() {
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
     

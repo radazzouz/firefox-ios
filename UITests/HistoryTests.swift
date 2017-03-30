@@ -15,7 +15,7 @@ class HistoryTests: KIFTestCase {
         BrowserUtils.dismissFirstRunUI()
 		let app = XCUIApplication()
 		app.launch()
-        BuddyBuildSDK.startUITestsVideoRecording()
+        BuddyBuildSDK.startUITests()
     }
 	
     func addHistoryItemPage(_ pageNo: Int) -> String {
@@ -140,7 +140,7 @@ class HistoryTests: KIFTestCase {
         BrowserUtils.resetToAboutHome(tester())
         BrowserUtils.clearPrivateData(tester: tester())
      
-		BuddyBuildSDK.stopUITestsVideoRecording()
+		BuddyBuildSDK.stopUITests()
 		super.tearDown()
     }
 }
